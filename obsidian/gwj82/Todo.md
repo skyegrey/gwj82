@@ -10,8 +10,11 @@
 	- [x] Camera movements
 		- [x] Camera zoom
 		- [x] Camera pan
-	- [ ] Collect [[resources]]
-		- [ ] Some sort of UI
+	- [ ] Collect resources
+		- [ ] UI outline
+		- [ ] Food icon
+		- [ ] Food text
+		- [ ] Farm increases resource count
 	- [ ] Barracks
 		- [ ] 
 		- [ ] 50 food to train a knight
@@ -46,3 +49,15 @@
 	- [ ] Iron
 	- [ ] Stone
 	- [ ] Hotkeys
+
+
+ - [ ] Art
+	 - [ ] Resource Icons
+		 - [ ] Food
+	 - [ ] Buildings
+		 - [ ] Main Base
+		 - [ ] Farm
+		 - [ ] Barracks
+
+- [ ] SFX 
+	- [ ] Farm Placement

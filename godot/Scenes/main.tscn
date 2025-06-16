@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=4 uid="uid://dsjfqxww1lyyx"]
+[gd_scene load_steps=16 format=4 uid="uid://dsjfqxww1lyyx"]
 
 [ext_resource type="Texture2D" uid="uid://bxkrx08eblltb" path="res://Assets/Tileset/tileset.png" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://pa165e7pxbxn" path="res://Scripts/main.gd" id="1_kry3j"]
+[ext_resource type="Script" uid="uid://b1n5qbkyckmcx" path="res://Scenes/inventory.gd" id="2_6iyac"]
 [ext_resource type="Texture2D" uid="uid://cafsb4ru3yly2" path="res://Assets/Buildings/base.png" id="2_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://su5jf83x7e00" path="res://Assets/UI/menu-tile.png" id="3_8gbba"]
 [ext_resource type="Script" uid="uid://b5lvf20uvxvdf" path="res://Scripts/buildings.gd" id="3_21xkr"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://vbktxr4tjsdo" path="res://Assets/UI/valid-placement-sprite.png" id="6_344ge"]
 [ext_resource type="Texture2D" uid="uid://dbqd2vkeyqkwp" path="res://Assets/UI/invalid-placement.png" id="7_ynf5e"]
 [ext_resource type="Script" uid="uid://n67fx23skjjj" path="res://Scripts/camera.gd" id="10_d1ilt"]
+[ext_resource type="Script" uid="uid://bc2q5l3tlpwkq" path="res://Scenes/resource_display.gd" id="12_fdnlq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("1_jjgbg")
@@ -26,6 +28,10 @@ sources/1 = SubResource("TileSetAtlasSource_bo1nx")
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_kry3j")
+
+[node name="Inventory" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_6iyac")
 
 [node name="Map" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -82,6 +88,36 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1200.0
 offset_bottom = 800.0
+
+[node name="ResourceDisplays" type="Control" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="ResourceDisplay" type="Control" parent="CanvasLayer/UI/ResourceDisplays"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 50.0
+grow_horizontal = 0
+script = ExtResource("12_fdnlq")
+
+[node name="ResourceCountText" type="RichTextLabel" parent="CanvasLayer/UI/ResourceDisplays/ResourceDisplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "Food: 0"
 
 [node name="BuildMenu" type="Control" parent="CanvasLayer/UI"]
 layout_mode = 1
