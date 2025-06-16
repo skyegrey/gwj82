@@ -7,9 +7,9 @@
 	- [x] Fog of war mechanics
 		- [x] Initial tiles revelaed
 		- [x] On building place
-	- [ ] Camera movements
-		- [ ] Camera zoom
-		- [ ] Camera pan
+	- [x] Camera movements
+		- [x] Camera zoom
+		- [x] Camera pan
 	- [ ] Collect resources
 	- [ ] Barracks
 		- [ ] 50 food to train a knight
@@ -32,6 +32,10 @@
 	- [ ] Farm
 	- [ ] Mine
 	- [ ] Quarry
+
+- [ ] Camera
+	- [ ] Side panning
+	- [ ] Middle click scrolling
 
 - [ ] Enemy base
 

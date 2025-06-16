@@ -25,14 +25,16 @@ func _process(delta):
 	pass
 
 func _get_mouse_map_coordinates(_position):
-	return ground_layer.local_to_map(ground_layer.to_local(_position / camera.zoom))
+	return ground_layer.local_to_map(ground_layer.to_local((_position - 
+	Vector2(600, 400)) / camera.zoom + camera.position))
 
 func _input(event):
 	if is_placing:
 		if event is InputEventMouseButton:
-			if event.pressed == true:
-				if can_place:
-					end_placing(_get_mouse_map_coordinates(event.position))
+			if event.button_index == MOUSE_BUTTON_LEFT:
+				if event.pressed == true:
+					if can_place:
+						end_placing(_get_mouse_map_coordinates(event.position))
 		if event is InputEventMouseMotion:
 			position = ground_layer.map_to_local(_get_mouse_map_coordinates(event.position))
 			# TODO Extract to toggle function

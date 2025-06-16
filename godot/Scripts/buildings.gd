@@ -8,11 +8,9 @@ class_name Buildings extends Node2D
 	Vector2i(10, 2): town_center
 }
 
-
 func _ready():
 	var start_tile = Vector2i(10, 2)
 	reveal_tiles(start_tile, 3)
-
 
 func begin_placing_building():
 	_create_building()

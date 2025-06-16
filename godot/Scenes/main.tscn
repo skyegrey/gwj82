@@ -70,10 +70,10 @@ offset = Vector2(0, -8)
 
 [node name="Camera" type="Camera2D" parent="."]
 unique_name_in_owner = true
-offset = Vector2(150, 100)
+position = Vector2(150, 100)
 zoom = Vector2(4, 4)
 script = ExtResource("10_d1ilt")
-zoom_scaler = 0.7
+zoom_scaler = 0.5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
