@@ -6,4 +6,4 @@ class_name ResourceDisplay extends Control
 
 func _process(delta):
 	resource_count_text.text = str("Food: ",
-		inventory.get_resource_count(Inventory.ResourceKeys.FOOD))
+		inventory.get_resource_count(Inventory.ResourceKey.FOOD))

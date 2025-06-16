@@ -74,6 +74,8 @@ texture = ExtResource("7_ynf5e")
 texture = ExtResource("4_jjvhh")
 offset = Vector2(0, -8)
 
+[node name="ProductionTimer" type="Timer" parent="Buildings/Farm"]
+
 [node name="Camera" type="Camera2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(150, 100)
