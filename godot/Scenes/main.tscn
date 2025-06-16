@@ -1,15 +1,16 @@
-[gd_scene load_steps=13 format=4 uid="uid://dsjfqxww1lyyx"]
+[gd_scene load_steps=14 format=4 uid="uid://dsjfqxww1lyyx"]
 
 [ext_resource type="Texture2D" uid="uid://bxkrx08eblltb" path="res://Assets/Tileset/tileset.png" id="1_jjgbg"]
-[ext_resource type="Script" uid="uid://pa165e7pxbxn" path="res://Scenes/main.gd" id="1_kry3j"]
+[ext_resource type="Script" uid="uid://pa165e7pxbxn" path="res://Scripts/main.gd" id="1_kry3j"]
 [ext_resource type="Texture2D" uid="uid://cafsb4ru3yly2" path="res://Assets/Buildings/base.png" id="2_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://su5jf83x7e00" path="res://Assets/UI/menu-tile.png" id="3_8gbba"]
-[ext_resource type="Script" uid="uid://b5lvf20uvxvdf" path="res://Scenes/buildings.gd" id="3_21xkr"]
-[ext_resource type="Script" uid="uid://cp5r46qkklf3g" path="res://Scenes/fog_layer.gd" id="3_hptm8"]
+[ext_resource type="Script" uid="uid://b5lvf20uvxvdf" path="res://Scripts/buildings.gd" id="3_21xkr"]
+[ext_resource type="Script" uid="uid://cp5r46qkklf3g" path="res://Scripts/fog_layer.gd" id="3_hptm8"]
 [ext_resource type="Texture2D" uid="uid://dqda6onop1s0g" path="res://Assets/Buildings/farm.png" id="4_jjvhh"]
-[ext_resource type="Script" uid="uid://djcosmixujjoc" path="res://Scenes/farm.gd" id="5_6bp64"]
+[ext_resource type="Script" uid="uid://djcosmixujjoc" path="res://Scripts/farm.gd" id="5_6bp64"]
 [ext_resource type="Texture2D" uid="uid://vbktxr4tjsdo" path="res://Assets/UI/valid-placement-sprite.png" id="6_344ge"]
 [ext_resource type="Texture2D" uid="uid://dbqd2vkeyqkwp" path="res://Assets/UI/invalid-placement.png" id="7_ynf5e"]
+[ext_resource type="Script" uid="uid://n67fx23skjjj" path="res://Scripts/camera.gd" id="10_d1ilt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo1nx"]
 texture = ExtResource("1_jjgbg")
@@ -71,35 +72,33 @@ offset = Vector2(0, -8)
 unique_name_in_owner = true
 offset = Vector2(150, 100)
 zoom = Vector2(4, 4)
+script = ExtResource("10_d1ilt")
+zoom_scaler = 0.7
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
 
 [node name="UI" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 300.0
-offset_bottom = 200.0
+offset_right = 1200.0
+offset_bottom = 800.0
 
 [node name="BuildMenu" type="Control" parent="CanvasLayer/UI"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 300.0
 grow_vertical = 0
+scale = Vector2(2, 2)
 
 [node name="FarmButton" type="Button" parent="CanvasLayer/UI/BuildMenu"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -20.0
+offset_top = -40.0
 offset_right = 40.0
-offset_bottom = 20.0
 grow_vertical = 0
-scale = Vector2(0.5, 0.5)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/BuildMenu/FarmButton"]
 layout_mode = 1
@@ -110,9 +109,11 @@ offset_top = -40.0
 offset_right = 40.0
 grow_vertical = 0
 texture = ExtResource("3_8gbba")
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="TextureRect" parent="CanvasLayer/UI/BuildMenu/FarmButton"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("4_jjvhh")
+metadata/_edit_lock_ = true
