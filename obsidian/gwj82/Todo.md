@@ -10,16 +10,20 @@
 	- [x] Camera movements
 		- [x] Camera zoom
 		- [x] Camera pan
-	- [ ] Collect [[resources]]
-		- [ ] Some sort of UI
+	- [ ] Collect resources
+		- [x] UI outline
+		- [ ] Food icon
+		- [x] Food text
+		- [x] Farm increases resource count
 	- [ ] Barracks
-		- [ ] 
+		- [ ] Convert farm building to scene
 		- [ ] 50 food to train a knight
 		- [ ] Box knights
 	- [ ] Enemy base
 		- [ ] Creates enemy units
 		- [ ] Units try to attack a base
-	- [ ] Zoom in / out
+
+	- [x] Zoom in / out
 	- [ ] Border on Fog of War
 
 - [ ] Remove button white outline 
@@ -46,3 +50,15 @@
 	- [ ] Iron
 	- [ ] Stone
 	- [ ] Hotkeys
+
+
+ - [ ] Art
+	 - [ ] Resource Icons
+		 - [ ] Food
+	 - [ ] Buildings
+		 - [ ] Main Base
+		 - [ ] Farm
+		 - [ ] Barracks
+
+- [ ] SFX 
+	- [ ] Farm Placement
