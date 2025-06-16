@@ -10,8 +10,10 @@
 	- [x] Camera movements
 		- [x] Camera zoom
 		- [x] Camera pan
-	- [ ] Collect resources
+	- [ ] Collect [[resources]]
+		- [ ] Some sort of UI
 	- [ ] Barracks
+		- [ ] 
 		- [ ] 50 food to train a knight
 		- [ ] Box knights
 	- [ ] Enemy base
