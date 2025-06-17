@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://dsjfqxww1lyyx"]
+[gd_scene load_steps=17 format=4 uid="uid://dsjfqxww1lyyx"]
 
 [ext_resource type="Texture2D" uid="uid://bxkrx08eblltb" path="res://Assets/Tileset/tileset.png" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://pa165e7pxbxn" path="res://Scripts/main.gd" id="1_kry3j"]
@@ -26,9 +26,6 @@ tile_shape = 1
 tile_layout = 5
 tile_size = Vector2i(32, 16)
 sources/1 = SubResource("TileSetAtlasSource_bo1nx")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkdf5"]
-size = Vector2(40, 40)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_kry3j")
@@ -111,24 +108,20 @@ text = "Food: 0"
 
 [node name="BuildMenu" type="Control" parent="CanvasLayer/UI"]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -100.0
-grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(2, 2)
 
 [node name="FarmButton" type="Button" parent="CanvasLayer/UI/BuildMenu"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -100.0
+offset_top = -40.0
 offset_right = 40.0
-offset_bottom = -60.0
 grow_vertical = 0
-scale = Vector2(2, 2)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/BuildMenu/FarmButton"]
 layout_mode = 1
@@ -153,12 +146,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 80.0
-offset_top = -100.0
-offset_right = 120.0
-offset_bottom = -60.0
+offset_left = 42.0
+offset_top = -40.0
+offset_right = 82.0
 grow_vertical = 0
-scale = Vector2(2, 2)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/BuildMenu/BarracksButton"]
 layout_mode = 1
@@ -183,16 +174,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -87.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="SelectionBox" type="NinePatchRect" parent="CanvasLayer/UI/Control"]
-unique_name_in_owner = true
 visible = false
 layout_mode = 0
-offset_right = 16.0
-offset_bottom = 16.0
+offset_right = 40.0
+offset_bottom = 40.0
 texture = ExtResource("12_jkdf5")
 region_rect = Rect2(0, 0, 48.0225, 48)
 patch_margin_left = 8
@@ -204,10 +193,3 @@ script = ExtResource("13_jkdf5")
 [node name="PlayerUnits" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("12_6iyac")
-
-[node name="SelectArea" type="Area2D" parent="PlayerUnits"]
-collision_layer = 2
-
-[node name="SelectCollider" type="CollisionShape2D" parent="PlayerUnits/SelectArea"]
-position = Vector2(20, 20)
-shape = SubResource("RectangleShape2D_jkdf5")
