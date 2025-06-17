@@ -50,6 +50,8 @@
 	- [ ] Iron
 	- [ ] Stone
 	- [ ] Hotkeys
+		- [ ] Building hotkeys
+
 
 
  - [ ] Art

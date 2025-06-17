@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dix5jy11yf3jb"]
+
+[ext_resource type="Script" uid="uid://dmfqgqxmnm8ul" path="res://Scripts/knight.gd" id="1_vifib"]
+[ext_resource type="Texture2D" uid="uid://bji0aljqwixda" path="res://Assets/PlayerUnits/Spearman/Spearman_Idle.png" id="2_0kok3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkdf5"]
+atlas = ExtResource("2_0kok3")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wsu2k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkdf5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Spearman" type="Node2D"]
+script = ExtResource("1_vifib")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_wsu2k")
+autoplay = "default"
+metadata/_edit_lock_ = true
