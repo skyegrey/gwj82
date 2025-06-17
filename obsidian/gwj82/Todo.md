@@ -12,7 +12,6 @@
 		- [x] Camera pan
 	- [x] Collect resources
 		- [x] UI outline
-		- [ ] Food icon
 		- [x] Food text
 		- [x] Farm increases resource count
 	- [x] Barracks
@@ -29,9 +28,10 @@
 	- [x] Units reveal tiles on new location
 
 	- [x] Zoom in / out
-	- [ ] Border on Fog of War
-
+- [ ] Buildings only on Permanently revealed tiles
+- [ ] Border on Fog of War
 - [ ] Remove button white outline 
+- [ ] Middle wheel to move map
 
 - [ ] Map
 	- [ ] Map background
