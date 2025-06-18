@@ -10,7 +10,6 @@ class_name PlayerUnits extends Units
 # State Variables
 @onready var selected_units = []
 
-
 func _ready():
 	selection_box.box_drawn.connect(_create_selected_collider)
 	select_area.area_entered.connect(_select_unit)
@@ -42,7 +41,7 @@ func _select_unit(unitArea: Area2D):
 	await RenderingServer.frame_post_draw
 	select_area.monitoring = false
 
-func spawn_unit(unit_scene: PackedScene) -> PlayerUnit:
-	var spawned_unit = super(unit_scene)
+func spawn_unit(_position: Vector2, unit_scene: PackedScene) -> PlayerUnit:
+	var spawned_unit = super(_position, unit_scene)
 	spawned_unit.fog_layer = fog_layer
 	return spawned_unit

@@ -21,7 +21,18 @@
 		- [x] Knights can move
 	- [x] Enemy base
 		- [x] Creates enemy units
+		- [x] Buildings limit spawns
 		- [ ] Units try to attack a base
+		- [x] Unit hp bars
+		- [ ] Right click target unit to attack it
+		- [ ] Unit attacks
+			- [ ] Spearman
+			- [ ] Spectre
+
+			- [ ] Detection area for units in range (e.g. a spearman will attack another unit after one dies)
+			- [ ] Building HPs -> Generic building object
+			- [ ] Enemy units can detect buildings
+			- [ ] 
 	- [x] Yoink revealing tile functionality to fog layer
 	- [x] Add a reference to the fog layer to units
 	- [x] Units keep track of current location
@@ -33,6 +44,8 @@
 - [ ] Remove button white outline 
 - [ ] Middle wheel to move map
 - [ ] Resource building properties (e.g. production timer etc.)
+- [ ] Unit fanning / co-operative pathfinding
+- [ ] Fix y-sort
 
 - [ ] Map
 	- [ ] Map background

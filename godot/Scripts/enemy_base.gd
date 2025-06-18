@@ -8,9 +8,6 @@ func _ready():
 	production_timer.start()
 	is_placing = false
 
-func _process(delta):
-	print(production_timer.wait_time)
-
 func _produce():
-	var spawned_unit = enemy_units.spawn_unit(SPECTRE)
+	var spawned_unit = enemy_units.spawn_unit(position, SPECTRE)
 	spawned_unit.position = position
