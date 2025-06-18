@@ -6,11 +6,12 @@ class_name Building extends Node2D
 @onready var inventory: Inventory
 @onready var buildings: Buildings
 @onready var player_units: PlayerUnits
+@onready var enemy_units: EnemyUnits
 
 # Children Refs
 @onready var invalid_placement_sprite = $InvalidPlacementSprite
 @onready var valid_placement_sprite = $ValidPlacementSprite
-@onready var production_timer = $ProductionTimer
+@onready var production_timer: Timer = $ProductionTimer
 
 # States
 @onready var is_placing: bool = true
@@ -23,6 +24,7 @@ func _ready():
 	production_timer.timeout.connect(_produce)
 
 func _produce():
+	print("super :)")
 	pass
 
 func _input(event):

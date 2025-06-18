@@ -1,0 +1,1 @@
+class_name Spearman extends PlayerUnit

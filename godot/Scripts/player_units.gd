@@ -1,9 +1,7 @@
-class_name PlayerUnits extends Node2D
+class_name PlayerUnits extends Units
 
 # Scene Refs
 @onready var selection_box: SelectionBox = %SelectionBox
-@onready var camera = %Camera
-@onready var fog_layer = %FogLayer
 
 # Child Refs
 @onready var select_collider = $SelectArea/SelectCollider
@@ -22,12 +20,6 @@ func _process(delta):
 
 func _canvas_position_to_game_space(_position): 
 	return (_position - Vector2(600, 400)) / camera.zoom + camera.position
-
-func spawn_unit(unit_scene: PackedScene):
-	var new_unit: PlayerUnit = unit_scene.instantiate()
-	new_unit.fog_layer = fog_layer
-	add_child(new_unit)
-	return new_unit
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -49,4 +41,8 @@ func _select_unit(unitArea: Area2D):
 	selected_units.append(unitArea.get_parent())
 	await RenderingServer.frame_post_draw
 	select_area.monitoring = false
-	
+
+func spawn_unit(unit_scene: PackedScene) -> PlayerUnit:
+	var spawned_unit = super(unit_scene)
+	spawned_unit.fog_layer = fog_layer
+	return spawned_unit

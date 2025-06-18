@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgyre281fhjvs"]
+
+[ext_resource type="Script" uid="uid://chxsihbjp40ka" path="res://Scripts/spectre.gd" id="1_1gx6o"]
+[ext_resource type="Texture2D" uid="uid://bk58sgammg4u1" path="res://Assets/Enemies/Spectre/Spectre_Idle.png" id="2_hqwmd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_442ms"]
+atlas = ExtResource("2_hqwmd")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jehag"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_442ms")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Spectre" type="Node2D"]
+script = ExtResource("1_1gx6o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -10)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_jehag")

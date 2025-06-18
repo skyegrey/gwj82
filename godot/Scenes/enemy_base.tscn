@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://71viaaj8bc5m"]
+
+[ext_resource type="Script" uid="uid://g17fhn6l0cyl" path="res://Scripts/enemy_base.gd" id="1_cs1oe"]
+[ext_resource type="Texture2D" uid="uid://c8doqaed8qv1l" path="res://Assets/Buildings/enemy-base.png" id="2_cs1oe"]
+
+[node name="EnemyBase" type="Node2D"]
+script = ExtResource("1_cs1oe")
+
+[node name="BuildingSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_cs1oe")
+offset = Vector2(0, -8)
+
+[node name="ProductionTimer" type="Timer" parent="."]

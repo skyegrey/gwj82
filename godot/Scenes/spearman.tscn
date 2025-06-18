@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dix5jy11yf3jb"]
 
-[ext_resource type="Script" uid="uid://dmfqgqxmnm8ul" path="res://Scripts/knight.gd" id="1_vifib"]
+[ext_resource type="Script" uid="uid://dmfqgqxmnm8ul" path="res://Scripts/spearman.gd" id="1_vifib"]
 [ext_resource type="Texture2D" uid="uid://bji0aljqwixda" path="res://Assets/PlayerUnits/Spearman/Spearman_Idle.png" id="2_0kok3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkdf5"]

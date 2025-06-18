@@ -19,8 +19,8 @@
 		- [x] camera panning
 		- [x] Box knights
 		- [x] Knights can move
-	- [ ] Enemy base
-		- [ ] Creates enemy units
+	- [x] Enemy base
+		- [x] Creates enemy units
 		- [ ] Units try to attack a base
 	- [x] Yoink revealing tile functionality to fog layer
 	- [x] Add a reference to the fog layer to units
@@ -32,6 +32,7 @@
 - [ ] Border on Fog of War
 - [ ] Remove button white outline 
 - [ ] Middle wheel to move map
+- [ ] Resource building properties (e.g. production timer etc.)
 
 - [ ] Map
 	- [ ] Map background
@@ -57,8 +58,6 @@
 	- [ ] Hotkeys
 		- [ ] Building hotkeys
 
-
-
  - [ ] Art
 	 - [ ] Resource Icons
 		 - [ ] Food
@@ -68,4 +67,13 @@
 		 - [ ] Barracks
 
 - [ ] SFX 
-	- [ ] Farm Placement
+	- [ ] Generic Building Placement noise
+	- [ ] Failed Placement noise
+	- [ ] Spearman Attack Noise
+	- [ ] PlayerUnit Death Noise
+	- [ ] Archer Attack Noise
+	- [ ] Spearman produced noise
+	- [ ] Void Creature Attack noise
+	- [ ] Void Creature Death noise
+	- [ ] UI SFX
+		- [ ] Item Selected

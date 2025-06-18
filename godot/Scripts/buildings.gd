@@ -1,9 +1,5 @@
 class_name Buildings extends Node2D
 
-# Building Scenes
-const FARM = preload("res://Scenes/farm.tscn")
-const BARRACKS = preload("res://Scenes/barracks.tscn")
-
 # Scene references
 @onready var town_center = $TownCenter
 @onready var fog_layer: TileMapLayer = %FogLayer
@@ -11,21 +7,15 @@ const BARRACKS = preload("res://Scenes/barracks.tscn")
 @onready var ground_layer: TileMapLayer = %GroundLayer
 @onready var inventory: Inventory = %Inventory
 @onready var player_units = %PlayerUnits
+@onready var enemy_units = %EnemyUnits
 
-@onready var buildings_positions = {
-	Vector2i(10, 2): town_center
-}
+# State variables
+@onready var buildings_positions = {}
 
-func _ready():
-	var start_tile = Vector2i(10, 2)
-	fog_layer.reveal_tiles(start_tile, 3)
-
-func begin_placing_building(building_type: String):
-	match building_type:
-		"Farm":
-			_create_building(FARM)
-		"Barracks":
-			_create_building(BARRACKS)
+# TODO Convert to signal
+func place_building(map_coordinates, building: Building):
+	fog_layer.reveal_tiles(map_coordinates, building.light_level)
+	buildings_positions[map_coordinates] = building
 
 func _create_building(building_scene: PackedScene):
 	var new_building = building_scene.instantiate()
@@ -34,13 +24,6 @@ func _create_building(building_scene: PackedScene):
 	new_building.inventory = inventory
 	new_building.buildings = self
 	new_building.player_units = player_units
+	new_building.enemy_units = enemy_units
 	add_child(new_building)
-
-func place_building(map_coordinates, building: Building):
-	fog_layer.reveal_tiles(map_coordinates, building.light_level)
-	buildings_positions[map_coordinates] = building
-
-func can_place_building(map_coordinates):
-	if buildings_positions.has(map_coordinates):
-		return false
-	return true
+	return new_building

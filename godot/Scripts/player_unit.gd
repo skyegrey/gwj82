@@ -1,4 +1,4 @@
-class_name PlayerUnit extends Node2D
+class_name PlayerUnit extends Unit
 
 @export var movement_speed: float = 15
 
